@@ -1,4 +1,6 @@
 package at.kk.msc.hcov.sdk.crowdsourcing.processing;
 
-public interface IProcessorPlugin {
+import org.springframework.plugin.core.Plugin;
+
+public interface IProcessorPlugin extends Plugin<String> {
 }
