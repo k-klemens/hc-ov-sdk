@@ -1,9 +1,15 @@
 package at.kk.msc.hcov.sdk.verificationtask.model;
 
 import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 /**
  * Basic class specifiyng the object for a verification task / HIT.
  */
