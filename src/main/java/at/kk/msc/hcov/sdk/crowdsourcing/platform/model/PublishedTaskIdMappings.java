@@ -1,5 +1,6 @@
 package at.kk.msc.hcov.sdk.crowdsourcing.platform.model;
 
+import java.util.Map;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,15 +12,16 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PublishedTask {
+public class PublishedTaskIdMappings {
 
   /**
-   * ID of the published task providded by the crowdsourcing platform.
+   * Mappings for ontology verification tasks.
    */
-  private String crowdsourcingId;
+  Map<UUID, String> ontologyVerificationTaskIdMappings;
 
   /**
-   * ID of the ontologyElements as used by the core platform.
+   * Mappings for quality control tasks.
    */
-  private UUID ontologyElementId;
+  Map<UUID, String> qualityControlTaskIdMappings;
+
 }

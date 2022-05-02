@@ -1,6 +1,6 @@
 package at.kk.msc.hcov.sdk.crowdsourcing.platform;
 
-import at.kk.msc.hcov.sdk.crowdsourcing.platform.model.PublishedTask;
+import at.kk.msc.hcov.sdk.crowdsourcing.platform.model.PublishedTaskIdMappings;
 import at.kk.msc.hcov.sdk.plugin.ConfigurablePlugin;
 import at.kk.msc.hcov.sdk.plugin.PluginConfigurationNotSetException;
 import at.kk.msc.hcov.sdk.verificationtask.model.VerificationTask;
@@ -15,6 +15,6 @@ public interface ICrowdsourcingConnectorPlugin extends ConfigurablePlugin<String
    * @return returns the results of the published verificaiton tasks
    * @throws PluginConfigurationNotSetException if the required configuration for the crowdsourcing platform is not set.
    */
-  List<PublishedTask> publishTasks(List<VerificationTask> verificationTasks) throws PluginConfigurationNotSetException;
+  PublishedTaskIdMappings publishTasks(List<VerificationTask> verificationTasks) throws PluginConfigurationNotSetException;
 
 }
