@@ -1,6 +1,7 @@
 package at.kk.msc.hcov.sdk.crowdsourcing.platform;
 
 import at.kk.msc.hcov.sdk.crowdsourcing.platform.model.HitStatus;
+import at.kk.msc.hcov.sdk.crowdsourcing.platform.model.RawResult;
 import at.kk.msc.hcov.sdk.plugin.ConfigurablePlugin;
 import at.kk.msc.hcov.sdk.plugin.PluginConfigurationNotSetException;
 import at.kk.msc.hcov.sdk.verificationtask.model.VerificationTask;
@@ -27,5 +28,14 @@ public interface ICrowdsourcingConnectorPlugin extends ConfigurablePlugin<String
    * @throws PluginConfigurationNotSetException if the required configuration for the crowdsourcing platform is not set.
    */
   Map<String, HitStatus> getStatusForHits(List<String> crowdsourcingIds) throws PluginConfigurationNotSetException;
+
+  /**
+   * Obtains the results for the given set of HITS from the crowdsourcing platform.
+   *
+   * @param crowdsourcingIds ids of the HITs to retrieve the results for.
+   * @return a Map of Lists of {@link RawResult} objects keyed by the crowdsourcing id.
+   * @throws PluginConfigurationNotSetException if the required configuration for the crowdsourcing platform is not set.
+   */
+  Map<String, List<RawResult>> getResultsForHits(List<String> crowdsourcingIds) throws PluginConfigurationNotSetException;
 
 }
